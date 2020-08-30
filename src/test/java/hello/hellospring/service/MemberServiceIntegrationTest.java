@@ -13,13 +13,12 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-@SpringBootTest
-@Transactional
+@SpringBootTest // 스프링 컨테이너와 함께 테스트를 진행
+@Transactional // 테스트케이스에 붙으면 완료 후 롤백 한다.
 class MemberServiceIntegrationTest {
 
   @Autowired
   MemberService memberService;
-
   @Autowired
   MemberRepository memberRepository;
 
